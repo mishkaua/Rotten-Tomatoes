@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Righteous } from "next/font/google";
 import { FilterGenres} from './components/filterGenres'
 import { MovieGrid } from "./components/movie_grid";
-
+import axios from "axios";
 
 export default function Home() {
   return (
