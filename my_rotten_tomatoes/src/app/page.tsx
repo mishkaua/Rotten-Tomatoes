@@ -5,7 +5,7 @@ import Image from "next/image";
 //import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Righteous } from "next/font/google";
 import { FilterGenres} from './components/filterGenres'
-import { MovieGrid } from "./components/movie_grid";
+//import { MovieList } from "./components/movie_list";
 import axios from "axios";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <main className="py-8">
 
         <FilterGenres />
-         <MovieGrid />
+{/*          <MovieList /> */}
       
       </main>
 
