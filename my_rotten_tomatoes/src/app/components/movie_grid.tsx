@@ -6,6 +6,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { axios } from 'axios'
+
+//fetch movie data from API onLoad
+/* export async function componentDidMount() {
+    const headers = {
+      'api_key': '7b80a4dcee06d29bb7cc319e2ef94706'
+    };
+    await axios.get('https://api.themoviedb.org/3/genre/movie/list?language=en', {headers})
+    .then(response =>{
+      this.setState({ totalReactPackages: response.data.total });
+      console.log('Genres: => ', response);
+    })
+    .catch(error => {
+      this.setState({ errorMessage: error.message });
+      console.error('Error getting a list of genres:', error);
+    })
+  } */
 
 export function MovieGrid() {
   return (
