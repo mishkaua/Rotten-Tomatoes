@@ -1,14 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {}
 
-module.exports = nextConfig /* = {
-    formats: ['img/avif, image/webp'],
-    remotePatterns: [
+module.exports = nextConfig
+
+module.exports = {
+    images: {
+      remotePatterns: [
         {
-            protocol: 'https',
-            hostname: '',
-            port: '',
-            pathname: ''
+          protocol: 'https',
+          hostname: 'image.tmdb.org',
+          port: '',
+          pathname: '/t/p/**',
         },
-    ],
-} */
+      ],
+    },
+  }
