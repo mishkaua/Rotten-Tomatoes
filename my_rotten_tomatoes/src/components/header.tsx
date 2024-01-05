@@ -7,6 +7,8 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import Link from 'next/link';
+
 
 export function Header() {
   return (
@@ -41,14 +43,14 @@ export function Header() {
             </div>
           </div>
           <div>
-            <button className="bg-stone-200 rounded-full px-5 mx-3">
+            <Link href="/connexion" className="bg-stone-200 rounded-full px-5 mx-3">
               <FontAwesomeIcon icon={faUser} className="pr-1" />
               Login
-            </button>
-            <button className="bg-stone-200 rounded-full px-3 mx-3">
+            </Link>
+            <Link href="/inscription" className="bg-stone-200 rounded-full px-3 mx-3">
               <FontAwesomeIcon icon={faUserPlus} className="pr-1" />
               Signup
-            </button>
+            </Link>
           </div>
         </div>
       </nav>

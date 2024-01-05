@@ -3,7 +3,7 @@ import Image from "next/image";
 //import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Righteous } from "next/font/google";
 //import { FilterGenres} from './components/filterGenres'
-import { MovieGrid } from "./components/movie_grid";
+import { MovieGrid } from "../components/homepage/movie_grid";
 
 
 export default function Home() {
@@ -12,7 +12,8 @@ export default function Home() {
       <main className="py-8">
 
 {/*         <FilterGenres />
- */}        <MovieGrid />
+ */}        
+ <MovieGrid />
       
       </main>
 

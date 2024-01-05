@@ -9,30 +9,21 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export function MovieGrid() {
   return (
-    <div className="movie-container text-sm grid grid-cols-5 gap-12 border border-grey-800 px-8 pb-16">
-      <div className="movie mt-8 px-4">
-        <div className="relative inline-block">
-          <a href="#">
+  <div>
+    <section>
+      <div className="flex justify-center items-center flex-col">
+        <h1 className="font-bold text-2xl center"> TOP FILMS</h1>
+        <div className="border-b pb-3 border-b-yellow-600 w-[5rem] h-[0.5rem]"></div>
+      </div>
+      <div className="movie-container text-sm grid grid-cols-5 gap-12 border border-grey-800 px-8 pb-16">
+        <div className="movie mt-8 px-4">
+          <div className="relative inline-block">
+            <a href="#">
             {/* add the link from an API */}
-            <Image
-              src="/images/ROTTEN.png"
-              alt="movie cover"
-              className="hover:opacity-75"
-              width={200}
-              height={350}
-            />
-          </a>
+              <Image src="/images/ROTTEN.png" alt="movie cover" className="hover:opacity-75" width={200} height={350}/></a>
           {/* circle with rating */}
-          <div
-            className="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full"
-            style={{
-              right: -20,
-              bottom: -20,
-            }}
-          >
-            <div className="font-semibold text-xs text-white flex justify-center items-center h-full">
-              80%
-            </div>
+          <div className="absolute bottom-0 right-0 w-16 h-16 bg-gray-800 rounded-full" style={{right: -20, bottom: -20,}}>
+            <div className="font-semibold text-xs text-white flex justify-center items-center h-full">80%</div>
           </div>
         </div>
         <a
@@ -58,6 +49,11 @@ export function MovieGrid() {
           <FontAwesomeIcon icon={faHeart} className="px-1" />
         </button>
       </div>
-    </div>
+      </div>
+    </section>
+    <section>
+
+    </section>
+  </div>
   );
 }
