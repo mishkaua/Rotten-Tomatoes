@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@nextui-org/react": "^2.2.9",
+    "@nextui-org/table": "^2.0.28",
     "@types/mongoose": "^5.11.97",
+    "ag-charts-react": "^9.0.1",
     "axios": "^1.6.4",
-    "axios-hooks": "^5.0.2",
     "bcrypt-ts": "^5.0.1",
-    "date-fns": "^3.0.6",
+    "chart.js": "^2.9.4",
     "flowbite-react": "^0.7.2",
     "mongoose": "^8.0.3",
     "next": "14.0.4",

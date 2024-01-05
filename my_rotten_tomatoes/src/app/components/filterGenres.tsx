@@ -1,10 +1,10 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Listbox, Transition } from "@headlessui/react";
-import axios from "axios";
+import axios from "axios"
 /* 
 const genres = [{ name: "Adventure" }, { name: "Action" }, { name: "Drama" }]; */
 
-export function FilterGenres() {
+export function FilterGenres () {
   const [genres, setGenres] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState({name:""});
   const getData = async () => {
@@ -35,7 +35,7 @@ export function FilterGenres() {
         leaveTo="opacity-0"
       >
         <Listbox.Options>
-          {genres.map((genre) => (
+          {genres.map((genre : any) => (
             <Listbox.Option
               key={genre.id}
               value={genre}
