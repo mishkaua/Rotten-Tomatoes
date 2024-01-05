@@ -9,6 +9,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import React, { Fragment, useState, useEffect } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import axios from "axios";
+import { format } from 'date-fns';
 
 export function MovieList() {
   const [movies, setMovies] = useState([]);
@@ -45,6 +46,7 @@ export function MovieList() {
               {/* add the link from an API */}
               <Image
                 src="/images/ROTTEN.png"
+                //src={movie.poster_path}
                 alt="movie cover"
                 className="hover:opacity-75"
                 width={200}
