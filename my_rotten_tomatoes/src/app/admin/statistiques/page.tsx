@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from "react"
-import { Chart } from "chart.js";
+import { Chart } from "chart.JS";
 
 
 export default function Statistiques(){
