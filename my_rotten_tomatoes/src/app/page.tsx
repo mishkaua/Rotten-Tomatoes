@@ -5,7 +5,8 @@ import Image from "next/image";
 //import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Righteous } from "next/font/google";
 import { FilterGenres} from './components/filterGenres'
-//import { MovieList } from "./components/movie_list";
+import { MovieList } from "./components/movie_list";
+//import { FilterDirectors } from "./components/filterDirectors";
 import axios from "axios";
 
 export default function Home() {
@@ -13,8 +14,9 @@ export default function Home() {
     <div className="bg-stone-200">
       <main className="py-8">
 
-        <FilterGenres />
-{/*          <MovieList /> */}
+         <FilterGenres />
+{/*          <FilterDirectors /> */}
+        <MovieList />
       
       </main>
 

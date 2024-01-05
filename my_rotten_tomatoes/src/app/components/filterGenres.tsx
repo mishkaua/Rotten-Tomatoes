@@ -4,17 +4,16 @@ import axios from "axios";
 /* 
 const genres = [{ name: "Adventure" }, { name: "Action" }, { name: "Drama" }]; */
 
-
 export function FilterGenres() {
   const [genres, setGenres] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState({name:""});
   const getData = async () => {
     const { data } = await axios.get('/api/movie_genres/');
-    console.log('Data', data);
+    console.log('Genres', data);
     //let response = JSON.stringify(data);
     setGenres(data.data.genres);
     setSelectedGenre(data.data.genres[0]);
-    console.log(data.data.genres[0]);
+    console.log('First genre is =>', data.data.genres[0]);
   };
   useEffect(() => {
     getData();
