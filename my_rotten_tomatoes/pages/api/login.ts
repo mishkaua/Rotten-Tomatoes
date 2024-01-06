@@ -11,8 +11,8 @@ export default async function login(req:NextApiRequest, res:NextApiResponse) {
         if (!user) {
             return res.status(401).json({data:'Invalid email'});
         }
-        if(compareSync(password, user.password)){
-            return res.status(401).json({data:'Wrong Password'});
+        if(!compareSync(password, user.password.toString())){
+            return res.status(401).json({data:'Wrong Password', password:password });
         }
         return res.status(200).json({name:user.name, email:user.email, userId:user.id})
     }

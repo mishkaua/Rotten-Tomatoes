@@ -21,7 +21,7 @@ export default function Films(){
                             </th>
                             <th className="text-sm w-[120px]">
                                 <article className="flex w-[90%] h-full  gap-3">
-                                    <p className="text-sm">REALISATEUR</p>     
+                                    <p className="text-sm">POPULARITE</p>     
                                 </article>
                             </th>
                             <th className="w-[150px] text-sm">
