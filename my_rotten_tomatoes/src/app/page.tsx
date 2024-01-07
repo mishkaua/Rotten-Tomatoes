@@ -6,7 +6,8 @@ import Image from "next/image";
 import { Righteous } from "next/font/google";
 import { FilterGenres} from './components/filterGenres'
 import { MovieList } from "../components/movie_list";
-//import { FilterDirectors } from "./components/filterDirectors";
+import { FilterDirectors } from "./components/filterDirectors.tsx";
+import { BackToTopButton } from "./components/BackToTopButton";
 import axios from "axios";
 
 export default function Home() {
@@ -15,9 +16,10 @@ export default function Home() {
       <main className="py-8">
 
          <FilterGenres />
-{/*          <FilterDirectors /> */}
+          <FilterDirectors />
         <MovieList />
       
+      <BackToTopButton />
       </main>
 
     </div>

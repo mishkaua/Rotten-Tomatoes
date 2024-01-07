@@ -9,7 +9,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import React, { Fragment, useState, useEffect } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import axios from "axios";
-import { format } from 'date-fns';
+import moment from 'moment';
 
 export function MovieList() {
   const [movies, setMovies] = useState([]);
@@ -43,10 +43,8 @@ export function MovieList() {
         >
           <div className="relative inline-block">
             <a href="#">
-              {/* add the link from an API */}
               <Image
-                src="/images/ROTTEN.png"
-                //src={movie.poster_path}
+                src={"https://image.tmdb.org/t/p/w185" + movie.poster_path}
                 alt="movie cover"
                 className="hover:opacity-75"
                 width={200}
@@ -73,17 +71,17 @@ export function MovieList() {
             {movie.title}
           </a>
           <div className="flex inline-flex place-items-stretch">
-            <div>
+{/*             <div>
               <FontAwesomeIcon icon={faStar} className="px-1" />
               {movie.vote_average.toFixed(2)}
             </div>
             <div>
               <FontAwesomeIcon icon={faComment} className="px-1" />
               Comments
-            </div>
+            </div> */}
           </div>
           <div className="my-1">Producing company</div>
-          <div className="text-xs my-1">{movie.release_date}</div>
+          <div className="text-xs my-1">{moment(movie.release_date).format('LL') } </div>
           <button className="border rounded-full p-1">
             Add to favourites
             <FontAwesomeIcon icon={faHeart} className="px-1" />

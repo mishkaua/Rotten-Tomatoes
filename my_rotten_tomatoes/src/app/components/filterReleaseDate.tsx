@@ -2,32 +2,31 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import axios from "axios";
 
-/* When I make API call i have to set the specific crew Array-ID to get the director e.g.:
-https://api.themoviedb.org/3/movie/{movie.id}?api_key=###&append_to_response=credits
-console.log(result.credits.crew[12].name); */
-
-export function FilterDirectors() {
-    const [directors, setDirectors] = useState([]);
-    const [selectedDirector, setSelectedDirector] = useState({name:""});
+export function FilterReleaseDate() {
+    const [dates, setDates] = useState([]);
+    const [selectedDate, setSelectedDate] = useState();
     const getData = async () => {
-      const { data } = await axios.get('/api/movie_directors/');
-      console.log('Directors', data);
-      setDirectors(data.data.results);
-      setSelectedDirector(data.data.results[0]);
-      console.log('First director is =>', data.data.results[0]);
+      const { data } = await axios.get("/api/movie_list/");
+      console.log("Movies for date filter", data);
+      setDates(data.data.results);
+      //console.log("First movie is =>", data.data.results[0]);
+      setSelectedDate(data.data.results[0]);
+      console.log('First movies for date filter is =>', data.data.results[0]);
     };
     useEffect(() => {
       getData();
     }, []);
   
+/*     {moment(movie.release_date).year()} */
+
     return (
-      <Listbox value={selectedDirector} onChange={setSelectedDirector}>
+      <Listbox value={selectedGenre} onChange={setSelectedGenre}>
         <Listbox.Label className="font-bold text-black px-3 m-3">
-          Directors
+          Genres
         </Listbox.Label>
         <br />
         <Listbox.Button className="rounded-lg border-solid border-2 border-grey-800 bg-grey-200 shadow-md px-3 m-3">
-            {selectedDirector.name}
+            {selectedGenre.name}
         </Listbox.Button>
         <Transition
           as={Fragment}
@@ -36,13 +35,13 @@ export function FilterDirectors() {
           leaveTo="opacity-0"
         >
           <Listbox.Options>
-            {directors.map((director) => (
+            {genres.map((genre) => (
               <Listbox.Option
-                key={director.id}
-                value={director}
+                key={genre.id}
+                value={genre}
                 //disabled={genre.unavailable}
               >
-                {director.name}
+                {genre.name}
               </Listbox.Option>
             ))}
           </Listbox.Options>
