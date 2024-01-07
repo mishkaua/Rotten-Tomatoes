@@ -5,7 +5,7 @@ export default function NavAdmin(){
         <div className="w-[350px] border-r border-red-500/20 h-[100vh]">
             <article className="w-full h-[12vh] border-b-[0.1px] border-gray-300/20 flex justify-center">
                 <figure className="w-[80%] h-full flex items-center">
-                    <h1 className="text-white text-xl font-bold">My Rotten Tomatoes</h1>
+                <a href="/"><h1 className="text-white text-xl font-bold">My Rotten Tomatoes</h1></a>
                 </figure>
             </article>
             <article className="w-full h-[12vh] border-b border-gray-300/20 flex justify-center">
